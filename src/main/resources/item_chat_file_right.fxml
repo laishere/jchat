@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cn.lai.jchat.component.CircleImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox stylesheets="@css/item_chat.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+      xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="item-wrapper"
+      alignment="TOP_RIGHT"
+>
+    <HBox styleClass="chat-content,right,file" fillHeight="false" fx:id="fileWrapper" maxWidth="200" spacing="10">
+        <HBox.margin>
+            <Insets top="20" right="10" />
+        </HBox.margin>
+        <VBox spacing="8" minWidth="160">
+            <Label fx:id="fileTitle" styleClass="file-title" wrapText="true" />
+            <Label fx:id="fileStatus" styleClass="file-size" />
+        </VBox>
+        <ImageView fx:id="fileIcon" fitWidth="50" preserveRatio="true">
+            <Image url="@images/ic_other.png" />
+        </ImageView>
+    </HBox>
+    <CircleImageView fx:id="fileAvatar" size="40">
+        <Image url="@images/placeholder.png"/>
+    </CircleImageView>
+</HBox>

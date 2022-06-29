@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cn.lai.jchat.component.CircleImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<HBox fx:id="itemWrapper" spacing="10" alignment="CENTER_LEFT" styleClass="item-wrapper" stylesheets="@css/item_chat_session.css"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cn.lai.jchat.controller.ItemChatSessionController"
+      onMouseClicked="#onClickItem"
+>
+    <CircleImageView fx:id="avatar" size="40">
+        <Image url="@images/placeholder.png"/>
+    </CircleImageView>
+    <StackPane>
+        <HBox.hgrow>ALWAYS</HBox.hgrow>
+        <VBox spacing="4">
+            <Label fx:id="name" maxWidth="100" styleClass="name"/>
+            <Label fx:id="lastMessage" styleClass="message" maxWidth="100"/>
+        </VBox>
+        <StackPane onMouseClicked="#onClickClose" maxWidth="20" prefWidth="20" prefHeight="20" fx:id="closeBtn" visible="false">
+            <StackPane.alignment>CENTER_RIGHT</StackPane.alignment>
+            <ImageView fitWidth="20" preserveRatio="true">
+                <Image url="@images/close_fill.png" />
+            </ImageView>
+        </StackPane>
+    </StackPane>
+</HBox>

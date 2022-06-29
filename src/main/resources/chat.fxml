@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="cn.lai.jchat.controller.ChatController"
+           stylesheets="@css/chat.css"
+           styleClass="wrapper"
+>
+    <VBox fx:id="chatWrapper" visible="false">
+        <HBox styleClass="title-wrapper" alignment="CENTER_LEFT">
+            <Label fx:id="title" />
+        </HBox>
+        <ListView fx:id="chatListView">
+            <VBox.vgrow>SOMETIMES</VBox.vgrow>
+        </ListView>
+        <VBox styleClass="input-wrapper">
+            <VBox.vgrow>NEVER</VBox.vgrow>
+            <HBox>
+                <StackPane onMouseClicked="#pickFile" prefWidth="20" prefHeight="20">
+                    <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                        <Image url="@images/file-open.png" />
+                    </ImageView>
+                </StackPane>
+            </HBox>
+            <TextArea wrapText="true" fx:id="input" minHeight="80" prefHeight="160" maxHeight="250"/>
+            <HBox alignment="BOTTOM_RIGHT">
+                <Button fx:id="sendBtn" onMouseClicked="#send" styleClass="btn" text="发送"/>
+            </HBox>
+        </VBox>
+    </VBox>
+    <ImageView fx:id="emptyWrapper" fitWidth="100" preserveRatio="true">
+        <Image url="@images/chat_empty.png" />
+        <StackPane.margin>
+            <Insets top="-50" />
+        </StackPane.margin>
+    </ImageView>
+</StackPane>

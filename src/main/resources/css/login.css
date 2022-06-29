@@ -1,0 +1,6 @@
+.btn {
+    -fx-font-size: 16;
+    -fx-padding: 5 20;
+    -fx-background-color: #2b8bd2;
+    -fx-text-fill: #fff;
+}

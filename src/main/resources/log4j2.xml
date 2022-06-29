@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <File name="file" fileName="app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m %ex%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="STDOUT" level="DEBUG"/>
+        </Root>
+        <Logger name="OnlineUserManager" level="INFO"
+                additivity="false">
+            <AppenderRef ref="STDOUT" level="DEBUG"/>
+        </Logger>
+    </Loggers>
+</Configuration>

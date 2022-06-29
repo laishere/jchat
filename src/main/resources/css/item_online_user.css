@@ -1,0 +1,18 @@
+.item-wrapper {
+    -fx-padding: 10;
+}
+
+.name {
+    -fx-font-size: 14;
+}
+
+.btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #09af31;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-pref-height: 24;
+    -fx-padding: 0 8;
+    -fx-font-size: 12;
+    -fx-text-fill: #22342c;
+}

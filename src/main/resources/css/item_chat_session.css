@@ -1,0 +1,18 @@
+.item-wrapper {
+    -fx-padding: 10;
+    -fx-background-insets: 0;
+}
+
+/*.list-cell:selected .item-wrapper {*/
+/*    -fx-background-color: #fff;*/
+/*}*/
+
+.name {
+    -fx-font-size: 15;
+    -fx-text-fill: #2f2f2f;
+}
+
+.message {
+    -fx-font-size: 12;
+    -fx-text-fill: #969696;
+}

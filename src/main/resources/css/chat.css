@@ -1,0 +1,47 @@
+.wrapper {
+    -fx-background-color: #f5f5f5;
+}
+
+.input-wrapper {
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #ddd;
+    -fx-padding: 15 20;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+}
+
+.text-area {
+    -fx-font-size: 15;
+    -fx-line-spacing: 5;
+    -fx-padding: 10 0;
+}
+
+.text-area * {
+    -fx-padding: 0;
+}
+
+.text-area, .text-area * {
+    -fx-background-color: transparent;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.btn {
+    -fx-background-color: #09af31;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 4;
+    -fx-font-size: 14;
+    -fx-padding: 8 20;
+}
+
+.title-wrapper {
+    -fx-padding: 10 20;
+    -fx-font-size: 16;
+    -fx-text-fill: #282828;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ddd;
+}

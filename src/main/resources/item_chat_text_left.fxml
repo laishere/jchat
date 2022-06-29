@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cn.lai.jchat.component.CircleImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<HBox stylesheets="@css/item_chat.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+      xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="item-wrapper"
+>
+    <CircleImageView fx:id="textAvatar" size="40">
+        <Image url="@images/placeholder.png"/>
+    </CircleImageView>
+    <StackPane styleClass="chat-content,left">
+        <HBox.margin>
+            <Insets top="20" left="10" />
+        </HBox.margin>
+        <Label fx:id="text" wrapText="true"/>
+    </StackPane>
+</HBox>

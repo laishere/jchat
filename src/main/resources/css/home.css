@@ -1,0 +1,45 @@
+.root-wrapper {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+.sidebar {
+    -fx-background-color: #ebece8;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.tab-item-wrapper {
+    -fx-pref-width: 125;
+    -fx-pref-height: 40;
+    -fx-alignment: CENTER;
+}
+
+.tab-item {
+    -fx-pref-height: 30;
+    -fx-font-size: 12;
+    -fx-padding: 0 0 5 0;
+}
+
+.tab-item.active {
+    -fx-border-width: 0 0 4 0;
+    -fx-border-color: #09af31;
+    -fx-border-insets: 0 0 5 0;
+}
+
+.user-name {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.top-btn:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}

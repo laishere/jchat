@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cn.lai.jchat.component.CircleImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="rootWrapper" styleClass="root-wrapper" prefHeight="480" minHeight="480" prefWidth="700" stylesheets="@css/home.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.lai.jchat.controller.HomeController">
+    <HBox fx:id="mainWrapper">
+        <VBox minWidth="200" prefWidth="200" styleClass="sidebar">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <padding>
+                    <Insets topRightBottomLeft="10"/>
+                </padding>
+                <CircleImageView fx:id="avatar" size="30">
+                    <Image url="@images/placeholder.png"/>
+                </CircleImageView>
+                <Label fx:id="name" styleClass="user-name"/>
+            </HBox>
+            <HBox>
+                <HBox onMouseClicked="#onClickSessionTab" styleClass="tab-item-wrapper">
+                    <Label fx:id="tabItemSession" styleClass="tab-item,active" text="会话" alignment="CENTER"/>
+                </HBox>
+                <HBox onMouseClicked="#onClickDiscoverTab" styleClass="tab-item-wrapper">
+                    <Label fx:id="tabItemDiscover" styleClass="tab-item" text="发现" alignment="CENTER"/>
+                </HBox>
+            </HBox>
+            <StackPane>
+                <VBox.vgrow>ALWAYS</VBox.vgrow>
+                <ListView fx:id="sessionListView"/>
+                <ListView fx:id="discoverListView" visible="false"/>
+            </StackPane>
+        </VBox>
+        <StackPane fx:id="chatWrapper">
+            <HBox.hgrow>ALWAYS</HBox.hgrow>
+            <HBox fx:id="topBtnWrapper" alignment="CENTER_RIGHT" maxHeight="30">
+                <StackPane.alignment>TOP_RIGHT</StackPane.alignment>
+                <StackPane styleClass="top-btn" onMouseClicked="#onClickMinimize" prefWidth="30" prefHeight="30">
+                    <ImageView fitWidth="16" preserveRatio="true">
+                        <Image url="@images/minimizing.png" />
+                    </ImageView>
+                </StackPane>
+                <StackPane styleClass="top-btn" onMouseClicked="#onClickMaximize" prefWidth="30" prefHeight="30">
+                    <ImageView fx:id="maximizeImage" fitWidth="16" preserveRatio="true">
+                        <Image url="@images/maximize.png" />
+                    </ImageView>
+                </StackPane>
+                <StackPane styleClass="top-btn" onMouseClicked="#onClickClose" prefWidth="30" prefHeight="30">
+                    <ImageView fitWidth="16" preserveRatio="true">
+                        <Image url="@images/close.png" />
+                    </ImageView>
+                </StackPane>
+            </HBox>
+        </StackPane>
+    </HBox>
+</StackPane>

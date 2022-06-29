@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cn.lai.jchat.component.CircleImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" fillWidth="false" prefHeight="400" prefWidth="300" spacing="20" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.lai.jchat.controller.LoginController">
+    <CircleImageView fx:id="avatar" size="80">
+        <Image url="@images/placeholder.png" />
+        <VBox.margin>
+            <Insets bottom="20" />
+        </VBox.margin>
+    </CircleImageView>
+    <TextField fx:id="nameInput" prefWidth="200" promptText="请输入称呼" />
+    <Button mnemonicParsing="false" onAction="#login" styleClass="btn" text="登录" />
+    <Label fx:id="loadingLabel" text="初始化中" textFill="#68bc8c" visible="false">
+        <VBox.margin>
+            <Insets bottom="-20" />
+        </VBox.margin>
+    </Label>
+</VBox>

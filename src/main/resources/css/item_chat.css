@@ -1,0 +1,46 @@
+.item-wrapper {
+    -fx-padding: 10 20;
+}
+
+.chat-content {
+    -fx-font-size: 16;
+    -fx-padding: 10;
+    -fx-max-width: 200px;
+    -fx-text-fill: #212121;
+}
+
+.chat-content.left {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0 10 10 10;
+}
+
+.chat-content.right {
+    -fx-background-color: #79d356;
+    -fx-background-radius: 10 0 10 10;
+}
+
+.chat-content.right.file {
+    -fx-background-color: #ffffff;
+}
+
+.chat-content.left.image, .chat-content.right.image {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.file-title {
+    -fx-text-fill: #222;
+    -fx-font-size: 15;
+    -fx-max-height: 40;
+    -fx-pref-height: 40;
+}
+
+.file-size {
+    -fx-text-fill: #cbcbcb;
+    -fx-font-size: 12;
+}
+
+.progress {
+    -fx-text-fill: #424242;
+    -fx-font-size: 10;
+}
